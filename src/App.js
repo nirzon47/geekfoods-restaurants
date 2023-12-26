@@ -5,7 +5,7 @@ import Quotes from './Quotes/Quotes'
 const App = () => {
 	return (
 		<div className='relative'>
-			<Header />
+			<Header activeTab='Restaurants' />
 			<Quotes />
 			<Footer />
 		</div>

@@ -14,6 +14,9 @@ const Restaurants = () => {
 			searchKey = e.target.value
 		} else if (e.target.id === 'ratingInput') {
 			inputRating = e.target.value
+			if (inputRating > 6) {
+				e.target.value = 6
+			}
 		}
 
 		setRestaurants(

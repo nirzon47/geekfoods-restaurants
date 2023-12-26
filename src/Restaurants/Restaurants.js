@@ -56,9 +56,15 @@ const Restaurants = () => {
 				</div>
 			</div>
 			<div className='grid grid-cols-1 gap-4 px-2 lg:px-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3'>
-				{restaurants.map((restaurant) => (
-					<RestaurantCard key={restaurant.id} restaurant={restaurant} />
-				))}
+				{restaurants.length > 0 ? (
+					restaurants.map((restaurant) => (
+						<RestaurantCard key={restaurant.id} restaurant={restaurant} />
+					))
+				) : (
+					<p className='py-12 text-3xl font-bold text-center text-red-600'>
+						No restaurants found
+					</p>
+				)}
 			</div>
 		</>
 	)
